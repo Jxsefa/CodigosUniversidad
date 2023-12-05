@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float parciales;
+    float solemne2;
+    float solemne1;
+    float notaExamen;
+    cout << "ingresa nota solemne 1: ";
+    cin >> solemne1;
+    cout << "ingresa nota solemne 2: ";
+    cin >> solemne2;
+    cout << "ingresa nota del promedio controles y laboratorio: ";
+    cin >> parciales;
+    float notaPresentacion;
+    notaPresentacion = ((solemne1*0.25+solemne2*0.25+parciales*0.20)/0.7);
+    cout << "su nota presntacion es: "<< notaPresentacion << endl;
+    if (notaPresentacion > 5){
+        cout << "felicidades te eximiste puto";
+    }else{
+        cout << "Pucha oh das examen :( "<< endl;
+        cout << "Que nota crees que te sacaras en el examen: ";
+        cin >> notaExamen;
+        float notaFinal = (solemne1*0.25+solemne2*0.25+parciales*0.20+notaExamen*0.30);
+        cout << "Tu nota final es: " << notaFinal << endl;
+        if (notaFinal>4){
+            cout << "LOOOOO HICISTE PERRAAA PASATE";
+        }else{
+            cout << "CTMM PONTE A ESTUDIAR POR LA CHUCHAAAA NO ESTAS PASANDO";
+        }
+    }
+
+    return 0;
+}
